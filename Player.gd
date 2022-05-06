@@ -1,7 +1,7 @@
 extends Area2D
 
 export var speed = 150
-export var spee = 6
+export var spee = 360
 var tagx = 2
 var direction = Vector2.ZERO
 var x
@@ -32,7 +32,7 @@ func _process(delta):
 	
 	if tagx == 0:
 		direction = Vector2.UP.rotated(deg2rad(x)).normalized()#.rotated(rotation_degrees)
-		position += direction * spee
+		position += direction * spee* delta
 	
 	########################################################
 
